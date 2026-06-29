@@ -1,7 +1,10 @@
 # Taro Template
 
+![CI](https://github.com/dyyz1993/taro-template/actions/workflows/ci.yml/badge.svg)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
 > Taro 4 + React 18 + TypeScript 跨端（weapp + H5）前端骨架模板。
-> 一处代码，编译到微信小程序和 H5。内置双平台数据桥接层，开箱即用无需后端。
+> 一处代码，编译到微信小程序和 H5。内置双平台数据桥接层 + NutUI 组件库，开箱即用无需后端。
 
 ## 这是什么
 
