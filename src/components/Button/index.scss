@@ -8,7 +8,7 @@
     right: 0;
     bottom: 0;
     padding: 16rpx 24rpx calc(24rpx + env(safe-area-inset-bottom));
-    background: $bg-card;
+    background: $tpl-bg-card;
     box-shadow: 0 -2rpx 12rpx rgba(0, 0, 0, 0.04);
     z-index: 50;
 
@@ -38,40 +38,40 @@
   &.is-disabled { opacity: 0.5; pointer-events: none; }
 
   &--primary {
-    background: $color-primary;
+    background: $tpl-color-primary;
     color: #FFF;
     &.is-block { width: 100%; }
   }
 
   &--secondary {
     background: #FFF;
-    color: $color-primary;
-    border: 2rpx solid $color-primary;
+    color: $tpl-color-primary;
+    border: 2rpx solid $tpl-color-primary;
     &.is-block { width: 100%; }
   }
 
   &--warning {
-    background: $color-warning;
+    background: $tpl-color-warning;
     color: #FFF;
     &.is-block { width: 100%; }
   }
 
   &--orange {
-    background: $color-warning;
+    background: $tpl-color-warning;
     color: #FFF;
     &.is-block { width: 100%; }
   }
 
   &--danger {
-    background: $color-danger;
+    background: $tpl-color-danger;
     color: #FFF;
     &.is-block { width: 100%; }
   }
 
   &--ghost {
     background: #FFF;
-    color: $text-regular;
-    border: 2rpx solid $border-color;
+    color: $tpl-text-regular;
+    border: 2rpx solid $tpl-border-color;
     &.is-block { width: 100%; }
   }
 }

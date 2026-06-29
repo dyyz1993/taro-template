@@ -2,7 +2,7 @@
 
 .page-index {
   min-height: 100vh;
-  background: $bg-page;
+  background: $tpl-bg-page;
   display: flex;
   flex-direction: column;
 
@@ -18,13 +18,13 @@
   &__hero-title {
     display: block;
     font-size: 44rpx;
-    font-weight: $weight-semibold;
-    color: $text-primary;
+    font-weight: $tpl-weight-semibold;
+    color: $tpl-text-primary;
   }
   &__hero-sub {
     display: block;
     font-size: 26rpx;
-    color: $text-secondary;
+    color: $tpl-text-secondary;
     margin-top: 8rpx;
   }
 
@@ -32,7 +32,7 @@
     display: block;
     text-align: center;
     font-size: 24rpx;
-    color: $text-placeholder;
+    color: $tpl-text-placeholder;
   }
 }
 
@@ -60,8 +60,16 @@
   &__label {
     margin-top: 8rpx;
     font-size: 20rpx;
-    color: $text-secondary;
+    color: $tpl-text-secondary;
     text-align: center;
     word-break: break-all;
   }
+}
+
+// NutUI 展示区横向排列
+.nutui-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16rpx;
+  align-items: center;
 }

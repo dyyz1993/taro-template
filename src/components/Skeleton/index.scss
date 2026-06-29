@@ -7,7 +7,7 @@
 
 .tpl-skeleton {
   padding: 24rpx;
-  background: $bg-page;
+  background: $tpl-bg-page;
 
   &__line {
     height: 28rpx;
@@ -23,7 +23,7 @@
     align-items: center;
     gap: 16rpx;
     padding: 16rpx 0;
-    border-bottom: 1rpx solid $border-light;
+    border-bottom: 1rpx solid $tpl-border-light;
   }
 
   &__avatar {
@@ -50,7 +50,7 @@
     border-radius: 24rpx;
     padding: 32rpx 24rpx;
     text-align: center;
-    box-shadow: $shadow-sm;
+    box-shadow: $tpl-shadow-sm;
   }
 
   &__card-icon {

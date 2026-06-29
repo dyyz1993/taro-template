@@ -6,6 +6,8 @@ import { Icon } from '@/components/Icon';
 import { Spacer } from '@/components/Spacer';
 import { EmptyState } from '@/components/EmptyState';
 import { toast } from '@/utils/wxapi';
+// NutUI 组件（别名避免与手写 Button 冲突）
+import { Button as NutButton, Input as NutInput, Switch as NutSwitch, Cell, Tag } from '@nutui/nutui-react-taro';
 import './index.scss';
 
 // 展示用的图标清单（与 Icon 组件 SVG_PATHS 对应）
@@ -69,6 +71,33 @@ export default function Index() {
           <PrimaryButton block onClick={() => toast('PrimaryButton block')}>PrimaryButton block</PrimaryButton>
           <Spacer height={12} />
           <SecondaryButton block onClick={() => toast('SecondaryButton block')}>SecondaryButton block</SecondaryButton>
+        </Card>
+
+        <Spacer height={24} />
+
+        {/* NutUI 组件库（60+ 组件，主题已覆盖为微信绿） */}
+        <Card title='NutUI 组件库'>
+          <View className='nutui-row'>
+            <NutButton type='primary' size='small'>NutUI 按钮</NutButton>
+            <NutButton type='default' size='small'>默认</NutButton>
+            <NutButton type='warning' size='small'>警告</NutButton>
+          </View>
+          <Spacer height={16} />
+          <NutInput placeholder='NutUI 输入框' />
+          <Spacer height={16} />
+          <View className='nutui-row'>
+            <Text>开关：</Text>
+            <NutSwitch defaultChecked />
+          </View>
+          <Spacer height={16} />
+          <View className='nutui-row'>
+            <Tag type='primary'>标签</Tag>
+            <Tag type='success'>成功</Tag>
+            <Tag type='danger'>危险</Tag>
+          </View>
+          <Spacer height={16} />
+          <Cell title='列表项' extra='右侧文字' />
+          <Cell title='带图标的列表项' />
         </Card>
 
         <Spacer height={48} />

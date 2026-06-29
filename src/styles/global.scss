@@ -1,9 +1,9 @@
 @import './variables.scss';
 
 page {
-  background: $bg-page;
-  color: $text-primary;
-  font-size: $font-base;
+  background: $tpl-bg-page;
+  color: $tpl-text-primary;
+  font-size: $tpl-font-base;
   font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Helvetica Neue', Helvetica, 'Microsoft YaHei', sans-serif;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
@@ -13,6 +13,15 @@ page {
   padding-top: env(safe-area-inset-top);
   padding-top: constant(safe-area-inset-top);
   // #endif
+
+  // ===== NutUI 主题覆盖：京东红 → 微信绿 =====
+  // NutUI 的 SCSS 变量默认读 CSS 变量 var(--nutui-color-xxx, fallback)，
+  // 在这里覆盖即可让所有 NutUI 组件用微信绿色系
+  --nutui-color-primary: #07C160;
+  --nutui-color-primary-stop-1: #06AE56;
+  --nutui-color-primary-stop-2: #07C160;
+  --nutui-color-primary-pressed: #059A4C;
+  --nutui-color-primary-light: #E8F8EE;
 }
 
 view, text, button, input, image, scroll-view, swiper, swiper-item {

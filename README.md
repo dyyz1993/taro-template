@@ -15,10 +15,48 @@
 | **框架** | React 18 + TypeScript 5（strict） |
 | **状态** | Zustand 4（已装好，按需创建 store） |
 | **数据层** | `src/utils/cloud.ts` — 双平台桥接：weapp→云函数 / H5→localStorage mock 或 fetch 真后端 |
-| **组件** | 11 个通用组件：Button / Card / NavBar / Icon / Loading / EmptyState / ErrorBoundary / Skeleton / Spacer / PageContainer / NetworkBanner |
+| **UI 组件库** | **NutUI-React-Taro 3.0.20**（60+ 组件，主题已覆盖为微信绿）。补全表单/弹层/列表等业务组件 |
+| **手写组件** | 11 个基础组件（`tpl-` 前缀）：Button / Card / NavBar / Icon / Loading / EmptyState / ErrorBoundary / Skeleton / Spacer / PageContainer / NetworkBanner |
 | **工具** | cloud / wxapi / storage / network / error / useAsync / validators / format |
-| **样式** | 完整设计 Token（`styles/variables.scss`）：颜色 / 字号 / 间距 / 圆角 / 阴影 |
-| **示例页** | 首页（组件展示）+ Todo 示例（验证数据层 CRUD） |
+| **样式** | 完整设计 Token（`styles/variables.scss`，变量已加 `tpl-` 前缀避免与 NutUI 冲突） |
+| **示例页** | 首页（手写组件 + NutUI 组件展示）+ Todo 示例（验证数据层 CRUD） |
+
+## NutUI 组件库
+
+模板集成了 [NutUI-React-Taro](https://nutui.jd.com/taro/react/3x/)（京东开源，Taro 官方推荐），60+ 组件开箱即用，补全了手写组件缺少的表单类、弹层类、列表类。
+
+### 用法
+
+```tsx
+import { Button as NutButton, Input, Switch, Cell, Tag, Dialog } from '@nutui/nutui-react-taro';
+
+// 同名组件加别名，避免与手写 Button 冲突
+<NutButton type='primary'>NutUI 按钮</NutButton>
+<Input placeholder='输入框' />
+<Switch defaultChecked />
+```
+
+完整组件列表见 [NutUI 官方文档](https://nutui.jd.com/taro/react/3x/)。
+
+### 主题定制
+
+模板已把 NutUI 默认的京东红 `#ff0f23` 覆盖成微信绿 `#07C160`（在 `src/styles/global.scss` 的 `page` 选择器里）：
+
+```scss
+page {
+  --nutui-color-primary: #07C160;
+  --nutui-color-primary-stop-1: #06AE56;
+  // ...
+}
+```
+
+改主题色只需改这几个 CSS 变量，所有 NutUI 组件自动跟随。
+
+### 和手写组件的关系
+
+- 手写组件用 `tpl-` 前缀（`tpl-btn`），NutUI 用 `nut-` 前缀（`nut-button`），**命名空间隔离，样式互不干扰**
+- SCSS 变量也已隔离：手写的加 `$tpl-` 前缀，NutUI 用 `$color-`（但默认读 `--nutui-` CSS 变量）
+- 两者可并存：简单场景用手写组件（更轻量），复杂表单/列表用 NutUI
 
 ## 快速开始
 
@@ -147,6 +185,14 @@ module.exports = { presets: [['taro', { framework: 'react', ts: true }]] };
 ### ⚠️ WXSS 不支持 `*` 通配符
 
 会报 `unexpected token *`。用具体标签名或 class。
+
+### ⚠️ NutUI 必须配 `selectorBlackList: ['nut-']`
+
+`config/index.ts` 的 `mini.postcss.pxtransform` 必须加 `selectorBlackList: ['nut-']`，否则 NutUI 组件（内部用 px + 自有缩放变量）会被 pxtransform 二次缩放，尺寸变形。模板已配好，**不要删**。
+
+### ⚠️ 手写 SCSS 变量必须加 `tpl-` 前缀
+
+因为 `config/index.ts` 的 `sass.resource` 会把 `variables.scss` 全局注入每个 SCSS 文件（含 NutUI 的）。如果你的变量叫 `$color-primary`，会和 NutUI 同名变量冲突。模板已把所有手写变量改成 `$tpl-color-primary` 等，**新增变量请保持 `tpl-` 前缀**。
 
 ## 目录结构
 

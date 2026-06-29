@@ -33,7 +33,8 @@ export default defineConfig(async (merge, { command, mode }) => {
         if (command !== 'build') chain.optimization.minimize(false);
       },
       postcss: {
-        pxtransform: { enable: true, config: {} },
+        // NutUI 内部用 px + 自有缩放变量，必须把 nut- 前缀的选择器排除在 pxtransform 之外，否则组件会被二次缩放变形
+        pxtransform: { enable: true, config: { selectorBlackList: ['nut-'] } },
         cssModules: { enable: false }
       }
     },

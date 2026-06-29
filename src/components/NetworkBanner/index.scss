@@ -4,9 +4,9 @@
   justify-content: center;
   gap: 12rpx;
   padding: 16rpx 24rpx;
-  background: $color-warning-light;
-  color: $color-warning;
-  font-size: $font-sm;
+  background: $tpl-color-warning-light;
+  color: $tpl-color-warning;
+  font-size: $tpl-font-sm;
 
   &__icon { font-size: 28rpx; }
   &__text { flex: 1; }

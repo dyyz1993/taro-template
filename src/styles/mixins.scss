@@ -32,15 +32,15 @@
 
 // 卡片样式
 @mixin card {
-  background: $bg-card;
-  border-radius: $radius-lg;
-  padding: $space-md;
-  box-shadow: $shadow-sm;
+  background: $tpl-bg-card;
+  border-radius: $tpl-radius-lg;
+  padding: $tpl-space-md;
+  box-shadow: $tpl-shadow-sm;
 }
 
 // 页面通用
 @mixin page {
   min-height: 100vh;
-  background: $bg-page;
-  padding-bottom: calc(120rpx + #{$safe-bottom});
+  background: $tpl-bg-page;
+  padding-bottom: calc(120rpx + #{$tpl-safe-bottom});
 }

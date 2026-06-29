@@ -2,73 +2,73 @@
 // 设计 Tokens（Design Tokens）
 // =====================================================================
 // 品牌主色
-$color-primary: #07C160;          // 微信绿
-$color-primary-light: #E8F8EE;    // 浅绿背景
-$color-primary-dark: #06AE56;     // 深绿
+$tpl-color-primary: #07C160;          // 微信绿
+$tpl-color-primary-light: #E8F8EE;    // 浅绿背景
+$tpl-color-primary-dark: #06AE56;     // 深绿
 
 // 辅助色
-$color-warning: #FF7A45;          // 橙色（丢失/警示）
-$color-warning-light: #FFF3EB;
-$color-info: #1989FA;             // 蓝
-$color-danger: #FA5151;           // 红
-$color-success: #07C160;
+$tpl-color-warning: #FF7A45;          // 橙色（丢失/警示）
+$tpl-color-warning-light: #FFF3EB;
+$tpl-color-info: #1989FA;             // 蓝
+$tpl-color-danger: #FA5151;           // 红
+$tpl-color-success: #07C160;
 
 // 文字
-$text-primary: #1A1A1A;
-$text-regular: #333;
-$text-secondary: #666;
-$text-placeholder: #999;
-$text-disabled: #BBB;
-$text-inverse: #FFF;
+$tpl-text-primary: #1A1A1A;
+$tpl-text-regular: #333;
+$tpl-text-secondary: #666;
+$tpl-text-placeholder: #999;
+$tpl-text-disabled: #BBB;
+$tpl-text-inverse: #FFF;
 
 // 背景
-$bg-page: #F7F8FA;                // 页面底色
-$bg-card: #FFFFFF;
-$bg-mask: rgba(0, 0, 0, 0.5);
+$tpl-bg-page: #F7F8FA;                // 页面底色
+$tpl-bg-card: #FFFFFF;
+$tpl-bg-mask: rgba(0, 0, 0, 0.5);
 
 // 边框
-$border-color: #EBEDF0;
-$border-light: #F2F3F5;
+$tpl-border-color: #EBEDF0;
+$tpl-border-light: #F2F3F5;
 
 // 间距（rpx）
-$space-xs: 8rpx;
-$space-sm: 16rpx;
-$space-md: 24rpx;
-$space-lg: 32rpx;
-$space-xl: 48rpx;
-$space-xxl: 64rpx;
-$space-xxxl: 80rpx;
+$tpl-space-xs: 8rpx;
+$tpl-space-sm: 16rpx;
+$tpl-space-md: 24rpx;
+$tpl-space-lg: 32rpx;
+$tpl-space-xl: 48rpx;
+$tpl-space-xxl: 64rpx;
+$tpl-space-xxxl: 80rpx;
 
 // 圆角
-$radius-sm: 8rpx;
-$radius-md: 16rpx;
-$radius-lg: 24rpx;
-$radius-xl: 32rpx;
-$radius-full: 9999rpx;
+$tpl-radius-sm: 8rpx;
+$tpl-radius-md: 16rpx;
+$tpl-radius-lg: 24rpx;
+$tpl-radius-xl: 32rpx;
+$tpl-radius-full: 9999rpx;
 
 // 字号
-$font-xs: 22rpx;
-$font-sm: 26rpx;
-$font-base: 28rpx;
-$font-md: 30rpx;
-$font-lg: 32rpx;
-$font-xl: 36rpx;
-$font-xxl: 44rpx;
+$tpl-font-xs: 22rpx;
+$tpl-font-sm: 26rpx;
+$tpl-font-base: 28rpx;
+$tpl-font-md: 30rpx;
+$tpl-font-lg: 32rpx;
+$tpl-font-xl: 36rpx;
+$tpl-font-xxl: 44rpx;
 
 // 字重
-$weight-regular: 400;
-$weight-medium: 500;
-$weight-semibold: 600;
-$weight-bold: 700;
+$tpl-weight-regular: 400;
+$tpl-weight-medium: 500;
+$tpl-weight-semibold: 600;
+$tpl-weight-bold: 700;
 
 // 阴影
-$shadow-sm: 0 2rpx 12rpx rgba(0, 0, 0, 0.06);
-$shadow-md: 0 6rpx 20rpx rgba(0, 0, 0, 0.08);
-$shadow-lg: 0 12rpx 32rpx rgba(0, 0, 0, 0.10);
+$tpl-shadow-sm: 0 2rpx 12rpx rgba(0, 0, 0, 0.06);
+$tpl-shadow-md: 0 6rpx 20rpx rgba(0, 0, 0, 0.08);
+$tpl-shadow-lg: 0 12rpx 32rpx rgba(0, 0, 0, 0.10);
 
 // 新增：卡片悬浮、分割线强调
-$color-divider: #F0F1F3;
-$color-card-bg: #FFFFFF;
+$tpl-color-divider: #F0F1F3;
+$tpl-color-card-bg: #FFFFFF;
 
 // 安全区
-$safe-bottom: env(safe-area-inset-bottom);
+$tpl-safe-bottom: env(safe-area-inset-bottom);

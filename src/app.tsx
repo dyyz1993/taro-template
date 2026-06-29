@@ -5,6 +5,7 @@ import { initCloud, initApiBaseFromEnv } from '@/utils/cloud';
 import { ErrorBoundary } from '@/components/ErrorBoundary';
 import { NetworkBanner } from '@/components/NetworkBanner';
 import { installGlobalErrorHandlers } from '@/utils/error';
+import '@nutui/nutui-react-taro/dist/style.css';
 import './styles/global.scss';
 
 /**

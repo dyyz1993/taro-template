@@ -2,7 +2,7 @@
 
 .page-demo {
   min-height: 100vh;
-  background: $bg-page;
+  background: $tpl-bg-page;
   display: flex;
   flex-direction: column;
 
@@ -12,14 +12,14 @@
   }
 
   &__intro {
-    background: $color-primary-light;
-    border-radius: $radius-md;
+    background: $tpl-color-primary-light;
+    border-radius: $tpl-radius-md;
     padding: 20rpx 24rpx;
     margin: 24rpx 0;
   }
   &__intro-text {
     font-size: 24rpx;
-    color: $text-secondary;
+    color: $tpl-text-secondary;
     line-height: 1.6;
   }
 
@@ -32,11 +32,11 @@
   &__input {
     flex: 1;
     height: 72rpx;
-    background: $bg-card;
-    border: 1rpx solid $border-color;
-    border-radius: $radius-md;
+    background: $tpl-bg-card;
+    border: 1rpx solid $tpl-border-color;
+    border-radius: $tpl-radius-md;
     padding: 0 20rpx;
-    font-size: $font-base;
+    font-size: $tpl-font-base;
   }
 
   &__stat {
@@ -44,11 +44,11 @@
     justify-content: space-between;
     align-items: center;
     font-size: 24rpx;
-    color: $text-secondary;
+    color: $tpl-text-secondary;
     padding: 16rpx 0;
   }
   &__refresh {
-    color: $color-primary;
+    color: $tpl-color-primary;
   }
 
   &__loading {
@@ -63,8 +63,8 @@
 .todo-item {
   display: flex;
   align-items: center;
-  background: $bg-card;
-  border-radius: $radius-md;
+  background: $tpl-bg-card;
+  border-radius: $tpl-radius-md;
   padding: 24rpx;
   margin-bottom: 12rpx;
 
@@ -82,21 +82,21 @@
     justify-content: center;
     width: 40rpx;
     height: 40rpx;
-    border: 2rpx solid $border-color;
-    border-radius: $radius-sm;
+    border: 2rpx solid $tpl-border-color;
+    border-radius: $tpl-radius-sm;
     font-size: 28rpx;
     color: #fff;
 
     &.is-checked {
-      background: $color-primary;
-      border-color: $color-primary;
+      background: $tpl-color-primary;
+      border-color: $tpl-color-primary;
     }
   }
 
   &__text {
     flex: 1;
-    font-size: $font-base;
-    color: $text-primary;
+    font-size: $tpl-font-base;
+    color: $tpl-text-primary;
   }
 
   &__del {
@@ -104,6 +104,6 @@
   }
   &__del-text {
     font-size: 24rpx;
-    color: $color-danger;
+    color: $tpl-color-danger;
   }
 }
