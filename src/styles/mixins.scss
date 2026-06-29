@@ -1,0 +1,46 @@
+@import './variables.scss';
+
+// 单行省略
+@mixin ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+// 多行省略
+@mixin ellipsis-multi($lines: 2) {
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+// flex 居中
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// flex 两端
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// 卡片样式
+@mixin card {
+  background: $bg-card;
+  border-radius: $radius-lg;
+  padding: $space-md;
+  box-shadow: $shadow-sm;
+}
+
+// 页面通用
+@mixin page {
+  min-height: 100vh;
+  background: $bg-page;
+  padding-bottom: calc(120rpx + #{$safe-bottom});
+}

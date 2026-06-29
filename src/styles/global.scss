@@ -1,0 +1,32 @@
+@import './variables.scss';
+
+page {
+  background: $bg-page;
+  color: $text-primary;
+  font-size: $font-base;
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Helvetica Neue', Helvetica, 'Microsoft YaHei', sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  // 全局刘海屏顶部安全区（无 NavBar 的页面用）
+  // #ifdef H5
+  padding-top: env(safe-area-inset-top);
+  padding-top: constant(safe-area-inset-top);
+  // #endif
+}
+
+view, text, button, input, image, scroll-view, swiper, swiper-item {
+  box-sizing: border-box;
+}
+
+
+button {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: none;
+  line-height: normal;
+  &::after {
+    border: none;
+  }
+}

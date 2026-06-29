@@ -1,0 +1,13 @@
+@import '../../styles/variables.scss';
+
+.dlm-page {
+  min-height: 100vh;
+  background: $bg-page;
+  display: flex;
+  flex-direction: column;
+
+  &__body {
+    flex: 1;
+    padding-bottom: calc(40rpx + env(safe-area-inset-bottom));
+  }
+}

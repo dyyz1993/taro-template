@@ -1,0 +1,77 @@
+@import '../../styles/variables.scss';
+
+.dlm-btn-wrap {
+  width: 100%;
+  &--fixed {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 16rpx 24rpx calc(24rpx + env(safe-area-inset-bottom));
+    background: $bg-card;
+    box-shadow: 0 -2rpx 12rpx rgba(0, 0, 0, 0.04);
+    z-index: 50;
+
+    // 固定底部的按钮占满整行宽度
+    .dlm-btn { width: 100%; }
+  }
+}
+
+.dlm-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 88rpx;
+  padding: 0 32rpx;
+  border-radius: 16rpx;
+  font-size: 30rpx;
+  font-weight: 500;
+  line-height: 1;
+  transition: all 0.2s;
+  user-select: none;
+
+  &--lg { height: 88rpx; font-size: 30rpx; }
+  &--md { height: 72rpx; font-size: 28rpx; padding: 0 24rpx; }
+  &--sm { height: 56rpx; font-size: 24rpx; padding: 0 16rpx; }
+
+  &.is-block { width: 100%; }
+  &.is-disabled { opacity: 0.5; pointer-events: none; }
+
+  &--primary {
+    background: $color-primary;
+    color: #FFF;
+    &.is-block { width: 100%; }
+  }
+
+  &--secondary {
+    background: #FFF;
+    color: $color-primary;
+    border: 2rpx solid $color-primary;
+    &.is-block { width: 100%; }
+  }
+
+  &--warning {
+    background: $color-warning;
+    color: #FFF;
+    &.is-block { width: 100%; }
+  }
+
+  &--orange {
+    background: $color-warning;
+    color: #FFF;
+    &.is-block { width: 100%; }
+  }
+
+  &--danger {
+    background: $color-danger;
+    color: #FFF;
+    &.is-block { width: 100%; }
+  }
+
+  &--ghost {
+    background: #FFF;
+    color: $text-regular;
+    border: 2rpx solid $border-color;
+    &.is-block { width: 100%; }
+  }
+}

@@ -1,0 +1,27 @@
+@import '../../styles/variables.scss';
+
+.dlm-card {
+  background: $bg-card;
+  border-radius: $radius-lg;
+  padding: $space-md;
+  box-shadow: $shadow-sm;
+  margin-bottom: $space-md;
+
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: $space-sm;
+  }
+
+  &__title {
+    font-size: 30rpx;
+    font-weight: 600;
+    color: $text-primary;
+  }
+
+  &__extra {
+    font-size: 24rpx;
+    color: $text-secondary;
+  }
+}

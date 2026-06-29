@@ -1,0 +1,72 @@
+@import '../../styles/variables.scss';
+
+@keyframes dlm-shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.dlm-skeleton {
+  padding: 24rpx;
+  background: $bg-page;
+
+  &__line {
+    height: 28rpx;
+    border-radius: 14rpx;
+    background: linear-gradient(90deg, rgba(0,0,0,0.04) 25%, rgba(0,0,0,0.08) 50%, rgba(0,0,0,0.04) 75%);
+    background-size: 200% 100%;
+    animation: dlm-shimmer 1.5s ease-in-out infinite;
+    margin-bottom: 12rpx;
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    gap: 16rpx;
+    padding: 16rpx 0;
+    border-bottom: 1rpx solid $border-light;
+  }
+
+  &__avatar {
+    width: 64rpx;
+    height: 64rpx;
+    border-radius: 16rpx;
+    background: linear-gradient(90deg, rgba(0,0,0,0.04) 25%, rgba(0,0,0,0.08) 50%, rgba(0,0,0,0.04) 75%);
+    background-size: 200% 100%;
+    animation: dlm-shimmer 1.5s ease-in-out infinite;
+    flex-shrink: 0;
+  }
+
+  &__content { flex: 1; }
+
+  &__card-grid {
+    display: flex;
+    gap: 16rpx;
+    margin-bottom: 24rpx;
+  }
+
+  &__card {
+    flex: 1;
+    background: #FFF;
+    border-radius: 24rpx;
+    padding: 32rpx 24rpx;
+    text-align: center;
+    box-shadow: $shadow-sm;
+  }
+
+  &__card-icon {
+    width: 72rpx;
+    height: 72rpx;
+    border-radius: 16rpx;
+    background: linear-gradient(90deg, rgba(0,0,0,0.04) 25%, rgba(0,0,0,0.08) 50%, rgba(0,0,0,0.04) 75%);
+    background-size: 200% 100%;
+    animation: dlm-shimmer 1.5s ease-in-out infinite;
+    margin: 0 auto 16rpx;
+  }
+
+  &__section {
+    background: #FFF;
+    border-radius: 24rpx;
+    padding: 24rpx;
+    margin-bottom: 16rpx;
+  }
+}

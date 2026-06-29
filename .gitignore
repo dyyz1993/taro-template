@@ -1,0 +1,29 @@
+# 依赖
+node_modules/
+
+# 构建产物
+dist/
+.swc/
+
+# 测试覆盖率
+coverage/
+
+# 本地环境配置（含密钥时）
+.env
+.env.local
+
+# 编辑器
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# 日志
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 微信开发者工具私有配置
+project.private.config.json
