@@ -70,20 +70,20 @@ export function NavBar({
   };
 
   return (
-    <View className={`dlm-navbar ${fixed ? 'dlm-navbar--fixed' : ''} ${root ? 'dlm-navbar--root' : ''}`} style={{ ...innerStyle, ...style }}>
-      <View className='dlm-navbar__inner' style={centerStyle}>
+    <View className={`tpl-navbar ${fixed ? 'tpl-navbar--fixed' : ''} ${root ? 'tpl-navbar--root' : ''}`} style={{ ...innerStyle, ...style }}>
+      <View className='tpl-navbar__inner' style={centerStyle}>
         {showBack && (
-          <View className='dlm-navbar__back' onClick={() => Taro.navigateBack({ fail: () => Taro.switchTab({ url: homePath }) })}>
+          <View className='tpl-navbar__back' onClick={() => Taro.navigateBack({ fail: () => Taro.switchTab({ url: homePath }) })}>
             <Text className='iconfont icon-back'>‹</Text>
           </View>
         )}
         {showHome && (
-          <View className='dlm-navbar__home' onClick={() => Taro.switchTab({ url: homePath })}>
+          <View className='tpl-navbar__home' onClick={() => Taro.switchTab({ url: homePath })}>
             <Icon name='home' size={32} color='#1A1A1A' />
           </View>
         )}
-        {title && <View className='dlm-navbar__title'>{title}</View>}
-        {right && <View className='dlm-navbar__right'>{right}</View>}
+        {title && <View className='tpl-navbar__title'>{title}</View>}
+        {right && <View className='tpl-navbar__right'>{right}</View>}
       </View>
     </View>
   );

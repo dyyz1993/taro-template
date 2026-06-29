@@ -17,9 +17,9 @@ export function NetworkBanner({ onRetry }: NetworkBannerProps) {
   if (online) return null;
 
   return (
-    <View className='dlm-net-banner' onClick={onRetry}>
-      <Text className='dlm-net-banner__icon'><Icon name='wifi-off' size={20} color='#FFF' /></Text>
-      <Text className='dlm-net-banner__text'>网络已断开{type !== 'unknown' && type !== 'none' ? `（${type}）` : ''}，请检查后点击重试</Text>
+    <View className='tpl-net-banner' onClick={onRetry}>
+      <Text className='tpl-net-banner__icon'><Icon name='wifi-off' size={20} color='#FFF' /></Text>
+      <Text className='tpl-net-banner__text'>网络已断开{type !== 'unknown' && type !== 'none' ? `（${type}）` : ''}，请检查后点击重试</Text>
     </View>
   );
 }

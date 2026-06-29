@@ -56,13 +56,13 @@ export class ErrorBoundary extends Component<PropsWithChildren<Props>, State> {
     }
 
     return (
-      <View className='dlm-error'>
-        <View className='dlm-error__icon'>⚠️</View>
-        <Text className='dlm-error__title'>页面遇到点问题</Text>
-        <Text className='dlm-error__desc'>{this.state.errMsg}</Text>
-        <View className='dlm-error__actions'>
-          <View className='dlm-error__btn' onClick={this.reset}>重试</View>
-          <View className='dlm-error__btn dlm-error__btn--primary' onClick={this.goHome}>回首页</View>
+      <View className='tpl-error'>
+        <View className='tpl-error__icon'>⚠️</View>
+        <Text className='tpl-error__title'>页面遇到点问题</Text>
+        <Text className='tpl-error__desc'>{this.state.errMsg}</Text>
+        <View className='tpl-error__actions'>
+          <View className='tpl-error__btn' onClick={this.reset}>重试</View>
+          <View className='tpl-error__btn tpl-error__btn--primary' onClick={this.goHome}>回首页</View>
         </View>
       </View>
     );

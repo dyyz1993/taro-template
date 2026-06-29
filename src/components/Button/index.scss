@@ -1,6 +1,6 @@
 @import '../../styles/variables.scss';
 
-.dlm-btn-wrap {
+.tpl-btn-wrap {
   width: 100%;
   &--fixed {
     position: fixed;
@@ -13,11 +13,11 @@
     z-index: 50;
 
     // 固定底部的按钮占满整行宽度
-    .dlm-btn { width: 100%; }
+    .tpl-btn { width: 100%; }
   }
 }
 
-.dlm-btn {
+.tpl-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;

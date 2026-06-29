@@ -26,9 +26,9 @@ export function PageContainer({
   className = ''
 }: PropsWithChildren<PageContainerProps>) {
   return (
-    <View className={`dlm-page ${className}`}>
+    <View className={`tpl-page ${className}`}>
       {title && <NavBar title={title} showBack={showBack} background={background} right={navRight} fixed={navFixed !== false} />}
-      <View className='dlm-page__body' style={bodyStyle}>
+      <View className='tpl-page__body' style={bodyStyle}>
         {children}
       </View>
     </View>

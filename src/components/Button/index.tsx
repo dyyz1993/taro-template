@@ -19,11 +19,11 @@ interface ButtonProps {
 export function PrimaryButton({ children, fixedBottom, block, onClick, disabled, loading, className = '', style }: PropsWithChildren<ButtonProps>) {
   return (
     <View
-      className={`dlm-btn-wrap ${fixedBottom ? 'dlm-btn-wrap--fixed' : ''} ${className}`}
+      className={`tpl-btn-wrap ${fixedBottom ? 'tpl-btn-wrap--fixed' : ''} ${className}`}
       style={style}
     >
       <View
-        className={`dlm-btn dlm-btn--primary ${block ? 'is-block' : ''} ${disabled || loading ? 'is-disabled' : ''}`}
+        className={`tpl-btn tpl-btn--primary ${block ? 'is-block' : ''} ${disabled || loading ? 'is-disabled' : ''}`}
         onClick={() => !disabled && !loading && onClick?.()}
       >
         {loading ? '加载中...' : children}
@@ -36,11 +36,11 @@ export function PrimaryButton({ children, fixedBottom, block, onClick, disabled,
 export function SecondaryButton({ children, fixedBottom, block, onClick, disabled, className = '', style }: PropsWithChildren<ButtonProps>) {
   return (
     <View
-      className={`dlm-btn-wrap ${fixedBottom ? 'dlm-btn-wrap--fixed' : ''} ${className}`}
+      className={`tpl-btn-wrap ${fixedBottom ? 'tpl-btn-wrap--fixed' : ''} ${className}`}
       style={style}
     >
       <View
-        className={`dlm-btn dlm-btn--secondary ${block ? 'is-block' : ''} ${disabled ? 'is-disabled' : ''}`}
+        className={`tpl-btn tpl-btn--secondary ${block ? 'is-block' : ''} ${disabled ? 'is-disabled' : ''}`}
         onClick={() => !disabled && onClick?.()}
       >
         {children}
@@ -53,11 +53,11 @@ export function SecondaryButton({ children, fixedBottom, block, onClick, disable
 export function Button({ children, type = 'primary', size = 'lg', block, disabled, loading, onClick, className = '', style, fixedBottom }: PropsWithChildren<ButtonProps>) {
   return (
     <View
-      className={`dlm-btn-wrap ${fixedBottom ? 'dlm-btn-wrap--fixed' : ''} ${className}`}
+      className={`tpl-btn-wrap ${fixedBottom ? 'tpl-btn-wrap--fixed' : ''} ${className}`}
       style={style}
     >
       <View
-        className={`dlm-btn dlm-btn--${type} dlm-btn--${size} ${block ? 'is-block' : ''} ${disabled || loading ? 'is-disabled' : ''}`}
+        className={`tpl-btn tpl-btn--${type} tpl-btn--${size} ${block ? 'is-block' : ''} ${disabled || loading ? 'is-disabled' : ''}`}
         onClick={() => !disabled && !loading && onClick?.()}
       >
         {loading ? '加载中...' : children}

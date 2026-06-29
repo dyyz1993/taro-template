@@ -1,11 +1,11 @@
 @import '../../styles/variables.scss';
 
-@keyframes dlm-shimmer {
+@keyframes tpl-shimmer {
   0% { background-position: -200% 0; }
   100% { background-position: 200% 0; }
 }
 
-.dlm-skeleton {
+.tpl-skeleton {
   padding: 24rpx;
   background: $bg-page;
 
@@ -14,7 +14,7 @@
     border-radius: 14rpx;
     background: linear-gradient(90deg, rgba(0,0,0,0.04) 25%, rgba(0,0,0,0.08) 50%, rgba(0,0,0,0.04) 75%);
     background-size: 200% 100%;
-    animation: dlm-shimmer 1.5s ease-in-out infinite;
+    animation: tpl-shimmer 1.5s ease-in-out infinite;
     margin-bottom: 12rpx;
   }
 
@@ -32,7 +32,7 @@
     border-radius: 16rpx;
     background: linear-gradient(90deg, rgba(0,0,0,0.04) 25%, rgba(0,0,0,0.08) 50%, rgba(0,0,0,0.04) 75%);
     background-size: 200% 100%;
-    animation: dlm-shimmer 1.5s ease-in-out infinite;
+    animation: tpl-shimmer 1.5s ease-in-out infinite;
     flex-shrink: 0;
   }
 
@@ -59,7 +59,7 @@
     border-radius: 16rpx;
     background: linear-gradient(90deg, rgba(0,0,0,0.04) 25%, rgba(0,0,0,0.08) 50%, rgba(0,0,0,0.04) 75%);
     background-size: 200% 100%;
-    animation: dlm-shimmer 1.5s ease-in-out infinite;
+    animation: tpl-shimmer 1.5s ease-in-out infinite;
     margin: 0 auto 16rpx;
   }
 
